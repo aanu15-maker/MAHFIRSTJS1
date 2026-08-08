@@ -1,0 +1,69 @@
+      /* 1. Force the page to fill the entire screen height */
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .JS {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 24px;
+
+
+            }
+
+            h1 button {
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* Apply your colors here */
+  background-color: #ffffff;
+  color: rgb(34, 33, 33);
+    border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+            }
+            h1 {
+                  /* 1. Unlocks custom sizes and background colors */
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* 2. Fixes size bugs caused by hidden browser padding */
+  box-sizing: none; 
+  
+  /* 3. Removes the annoying default outline */
+  outline: none; 
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 24px;
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            /* 2. Your centering code now has a full-height body to reference */
+            p#demo {
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'Courier New', Courier, monospace;
+                color: rgb(0, 81, 255);
+                font-size: 46px;
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            img {
+                position: absolute;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                  max-width: 50%;
+                  max-height: fit-content;  /* Ensures it never gets wider than its container */
+    width: auto;     /* Sets the specific smaller width you want */
+    height: auto;
+            }

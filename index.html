@@ -1,0 +1,51 @@
+<!doctype html>
+<script>
+    let running = true;
+</script>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Style.css">
+        <style>
+            /* This ensures your JavaScript text area has a clean, safe gap below the image */
+            .JS {
+                margin-top: 15px; 
+            }
+            .JS p {
+                margin: 5px 0; /* Keeps the lines tight and neatly stacked */
+            }
+        </style>
+    </head>
+    <body>
+        <p id="demo">This is designed to show the effects of CSS.</p>
+         <img src='EXPLOSION.png' alt="Explosion" style="width:100%">
+         
+         <div class="JS">
+            <!-- Both lines are now clean HTML paragraphs so they cannot overlap -->
+            <p id="modified-target">Loading modified date...</p>
+            <p>Local Time: <span id="live-clock">Loading...</span></p>
+
+            <script>
+                // 1. Handle the Last Modified line safely without document.write
+                document.getElementById("modified-target").textContent = 
+                    "Last Modified: " + document.lastModified + ", UNDER CONSTRUCTION";
+                
+                // 2. Setup the dynamic Live Clock
+                const timeDisplay = document.getElementById("live-clock");
+
+                function updateClock() {
+                  var localtime = new Date().toLocaleTimeString(); 
+                  timeDisplay.textContent = localtime;
+                }
+
+                updateClock();
+                setInterval(updateClock, 1000);
+            </script>
+         </div>
+
+         <h1>
+            <button type="button" onclick="alert('THIS PAGE IS UNDER CONSTRUCTION  ')">Click Me!</button>
+         </h1>
+    </body>
+</html>
