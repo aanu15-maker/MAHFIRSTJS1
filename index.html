@@ -1,51 +1,70 @@
 <!doctype html>
-<script>
-    let running = true;
-</script>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="Style.css">
         <style>
-            /* This ensures your JavaScript text area has a clean, safe gap below the image */
             .JS {
                 margin-top: 15px; 
             }
             .JS p {
-                margin: 5px 0; /* Keeps the lines tight and neatly stacked */
+                margin: 5px 0; 
             }
         </style>
     </head>
     <body>
-        <p id="demo">ThIs tEXT IS FOr NOONes COnViNiEnCe</p>
-         <img src='EXPLOSION.png' alt="Explosion" style="width:100%">
-         
-         <div class="JS">
-            <!-- Both lines are now clean HTML paragraphs so they cannot overlap -->
-            <p id="modified-target">Loading modified date...</p>
-            <p>Local Time: <span id="live-clock">Loading...</span></p>
-
-            <script>
-                // 1. Handle the Last Modified line safely without document.write
-                document.getElementById("modified-target").textContent = 
-                    "Last Modified: " + document.lastModified + ", UNDER CONSTRUCTION";
-                
-                // 2. Setup the dynamic Live Clock
-                const timeDisplay = document.getElementById("live-clock");
-
-                function updateClock() {
-                  var localtime = new Date().toLocaleTimeString(); 
-                  timeDisplay.textContent = localtime;
-                }
-                updateClock();
-                setInterval(updateClock, 1000);
-            </script>
-         </div>
-
-         <h1>
+        <!-- Everything inside this container will disappear -->
+        <main id="game-container">
+            <p id="demo">ThIs tEXT IS FOr NOONes COnViNiEnCe</p>
+            <img src='EXPLOSION.png' alt="Explosion" style="width:100%">
             
-            <button onclick="alert('CAn you Like Not(IM ToO Buisy and i dont CAre :)')">PlS DooNt CwiCK Mwe</button>
-         </h1>
+            <div class="JS">
+               <p id="modified-target">Loading modified date...</p>
+               <p>Local Time: <span id="live-clock">Loading...</span></p>
+            </div>
+            <div style="margin-top: 20px; text-align: center;">
+               <div id="BUTTON"></div>
+               <!-- The button now has an explicit ID and NO messy inline onClick string -->
+               <button id="action-button">PlS DooNt CwiCK Mwe</button>
+            </div>
+        </main>
+
+        <!-- ONE MASTER SCRIPT BLOCK AT THE BOTTOM: Opera Mac can never lose track of variables here -->
+        <script>
+            // 1. App State Variables
+            let counter = 0;
+            let messageClearTimer;
+
+            // 2. The Live Clock Logic
+            document.getElementById("modified-target").textContent = 
+                "Last Modified: " + document.lastModified + ", UNDER CONSTRUCTION";
+            
+            const timeDisplay = document.getElementById("live-clock");
+            function updateClock() {
+                timeDisplay.textContent = new Date().toLocaleTimeString();
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+
+            // 3. The Click Event Handler
+            const buttonElement = document.getElementById('action-button');
+            const messageElement = document.getElementById('BUTTON');
+
+            buttonElement.addEventListener('click', function() {
+                counter++;
+                
+                if (counter > 5) {
+                    messageElement.textContent = 'SO, you clicked it ' + counter + ' times. /KILL PLAYER1... Why are you still here?';
+                } else {
+                    messageElement.textContent = 'LikE PLs BwOOoo, AnD AlsO WaS ThaT a GuN CwOSsHaiR????';
+                }
+
+                clearTimeout(messageClearTimer);
+                messageClearTimer = setTimeout(function() {
+                    messageElement.textContent = '';
+                }, 3000);
+            });
+        </script>
     </body>
 </html>
