@@ -16,7 +16,6 @@
             div button {
                 appearance: none;
                 -webkit-appearance: none;
-                font-style: italic;
                 position: absolute;
                 top: 85%;
                 left: 50%;
@@ -29,9 +28,22 @@
                 border: none;
                 outline: none;
                 cursor: crosshair;
-                font-family: 'Courier New', Courier, monospace;
+                font-family: "Comic Relief", system-ui;
                 font-size: 35px;
             }
+
+            .bebas-neue-regular {
+                font-family: "Bebas Neue", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .comic-relief-bold {
+                font-family: "Comic Relief", system-ui;
+                font-weight: 700;
+                font-style: normal;
+            }
+
+
             #BUTTON {
                 appearance: none;
                 -webkit-appearance: none;
@@ -48,7 +60,7 @@
                 border: none;
                 outline: none;
                 cursor: normal;
-                font-family: 'Courier New', Courier, monospace;
+                font-family: "Bebas Neue", sans-serif;
                 font-size: 35px;
             }
             h1 {
