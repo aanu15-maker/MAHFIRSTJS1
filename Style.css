@@ -1,1 +1,18 @@
-     
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+table {
+    width: 400px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 3px;
+}
+#header {
+    color:rgb(67, 98, 36);
+}
