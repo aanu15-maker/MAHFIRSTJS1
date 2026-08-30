@@ -6,7 +6,9 @@ body {
     display: grid;
     place-items: center;
     min-height: 100vh;
+    background-color: rgb(255, 255, 255);
 }
+
 table {
     height: 300px;
     width: 600px;
@@ -15,19 +17,17 @@ table {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 22px;
+    border-spacing: 4px 4px;
 }
 
 th, td {
     border: 1px solid black;
     padding: 3px;
+    font-family: 'Exo 2';
 }
 #header {
     color:rgb(67, 98, 36);
     font-weight: bold;
-}
-h1 {
-    width: center;
-    height: 60vh;
-    font-size: 50px;
+    font-family: 'Exo 2';
 }
 
