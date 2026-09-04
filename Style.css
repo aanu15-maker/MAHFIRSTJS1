@@ -51,6 +51,10 @@ th, td {
     position: absolute;
     top: 50%;
     left: 80%;
-    
-
+}
+.Google-link[title="Apple iPhones website"]:hover {
+    text-decoration: underline;
+}
+.explode-link[title="Explode"]:hover {
+    text-decoration: underline;
 }
