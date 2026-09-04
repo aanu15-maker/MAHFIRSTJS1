@@ -41,3 +41,16 @@ th, td {
     font-weight: bold;
     font-family: 'Exo 2';
 }
+.Google-link {
+    color: rgb(67, 98, 36);
+    font-weight: bold;
+    font-family: 'Exo 2';
+    text-decoration: none;
+    font-size: 25px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    
+
+}
