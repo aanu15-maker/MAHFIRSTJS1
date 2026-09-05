@@ -58,3 +58,15 @@ th, td {
 .explode-link[title="Explode"]:hover {
     text-decoration: underline;
 }
+.explode-link[title="Explode"]:active {
+    color: rgb(135, 135, 135);
+}
+.Google-link[title="Apple iPhones website"]:active {
+    color: rgb(135, 135, 135);
+}
+.Google-link[title="Apple iPhones website"]:focus {
+    color: rgb(67, 98, 36);
+}
+.explode-link[title="Explode"]:focus {
+    color: rgb(67, 98, 36);
+}
