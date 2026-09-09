@@ -70,3 +70,9 @@ th, td {
 .explode-link[title="Explode"]:focus {
     color: rgb(67, 98, 36);
 }
+a:visited {
+    color: rgb(0, 8, 255);
+}
+a {
+    color: rgb(0, 0, 0)
+}
