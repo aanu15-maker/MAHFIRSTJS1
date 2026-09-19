@@ -1,5 +1,9 @@
 
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -15,79 +19,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-image: url("IPHONE BCKGROUNd.jpg");
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.05);
-}
-.button {
-    font-size: 20px;
-    padding: 8px 16px;
-    cursor: pointer;
-    background-color: rgb(67, 98, 36);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    justify-content: top;
-    align-items: left;
+    background-color: rgb(0, 0, 0);
 }
 
-h1 {
-    margin: 0;
-    text-align: center;
-    font-size: clamp(32px, 7vw, 50px);
+canvas {
+    background-color: #000000; /* Replaces screen.fill((0,0,0)) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid #333;
+    align-self: center;
 }
 
-table {
-    width: min(600px, 100%);
-    font-size: clamp(14px, 3vw, 22px);
-    border-spacing: 4px 4px;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 3px;
-}
-
-.explode-link {
-    color: black;
-    font-size: 20px;
-    text-decoration: none;
-}
-#header {
-    color:rgb(67, 98, 36);
-    font-weight: bold;
-
-}
-.Google-link {
-    color: rgb(67, 98, 36);
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 25px;
-    letter-spacing: 1px;
-justify-content: center;  
-}
-.Google-link[title="Apple iPhones website"]:hover {
-    text-decoration: underline;
-}
-.explode-link[title="Explode"]:hover {
-    text-decoration: underline;
-}
-.explode-link[title="Explode"]:active {
-    color: rgb(135, 135, 135);
-}
-.Google-link[title="Apple iPhones website"]:active {
-    color: rgb(135, 135, 135);
-}
-.Google-link[title="Apple iPhones website"]:focus {
-    color: rgb(67, 98, 36);
-}
-.explode-link[title="Explode"]:focus {
-    color: rgb(67, 98, 36);
-}
-a:visited {
-    color: rgb(0, 8, 255);
-}
-a {
-    color: rgb(0, 0, 0)
-}
