@@ -1,14 +1,9 @@
 
-
-
-
-
-
-
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 
 // JavaScript Class replacing your Python Particle class
+
 class Particle {
     constructor(x, y) {
         this.x = x;
@@ -28,7 +23,7 @@ class Particle {
         this.speedY = (Math.random() * 30) - 15;
         
         // random.randint(100, 1000)
-        this.lifetime = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+        this.lifetime = Math.floor(Math.random() * 901) + 1000;
     }
 
     update() {
@@ -57,7 +52,7 @@ canvas.addEventListener('mousedown', (event) => {
     const mouseY = event.clientY - rect.top;
 
     // FIX: Changed .append() to .push()
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 50; i++) {
         particles.push(new Particle(mouseX, mouseY)); 
         document.getElementById('myAudio').play();
     }
@@ -84,5 +79,7 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
+
 // Start loop execution
 animate();
+
